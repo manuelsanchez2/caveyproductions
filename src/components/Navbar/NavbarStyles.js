@@ -30,11 +30,15 @@ export const NavLogo = styled(Link)`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  width: 100%;
+  width: max-content;
   max-width: 400px;
   display: flex;
   align-items: center;
   z-index: 50;
+
+  @media screen and (min-width: 960px) {
+    width: 100%;
+  }
 `;
 
 export const NavLogoText = styled.span`
