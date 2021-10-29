@@ -18,6 +18,7 @@ const Hero = () => {
         loop
         autoPlay
         muted
+        playsinline
       ></HeroVideo>
       <HeroContainer>
         <MainHeading>
