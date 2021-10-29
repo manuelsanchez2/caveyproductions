@@ -12,7 +12,6 @@ import {
   NavLinks,
   NavItem,
   NavLogoText,
-  NavClose,
 } from "./NavbarStyles.js";
 import { useLocation, useHistory } from "react-router-dom";
 import { data } from "../../data/NavbarData";
