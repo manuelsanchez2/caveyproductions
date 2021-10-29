@@ -67,7 +67,7 @@ export const TopLine = styled(motion.div)`
   font-weight: 550;
   letter-spacing: 1.4px;
   margin-bottom: 1.3rem;
-  color: #979797;
+  color: ${({ inverse }) => (inverse ? "#49574E" : "white")};
 `;
 
 export const Img = styled(motion.img)`
@@ -86,7 +86,7 @@ export const Heading = styled(motion.h2)`
   font-size: 3rem;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ inverse }) => (inverse ? "#0c4577" : "white")};
+  color: ${({ inverse }) => (inverse ? "#292929" : "white")};
   @media screen and (max-width: 768px) {
     text-align: center;
   }
@@ -109,33 +109,37 @@ export const ContentButton = styled(motion.button)`
   text-transform: uppercase;
   cursor: pointer;
   background: none;
-  color: ${({ inverse }) => (inverse ? "#0c4577" : "white")};
+  color: ${({ inverse }) => (inverse ? "#292929" : "white")};
   border-radius: 4px;
   white-space: nowrap;
   padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
-  border: 2px solid ${({ inverse }) => (inverse ? "#0c4577" : "white")};
+  border: 1px solid ${({ inverse }) => (inverse ? "#292929" : "white")};
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: color 0.6s ease-in-out;
+
   &:before {
     background: ${({ inverse }) => (inverse ? "#F45B49" : "white")};
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     z-index: -1;
-    transition: all 0.6s ease;
+    transition: all 0.6s ease-in-out;
     width: 100%;
     height: 0%;
     transform: translate(-50%, -50%) rotate(45deg);
   }
+
   &:hover:before {
     height: 500%;
   }
+
   &:hover {
     color: ${({ inverse }) => (inverse ? "white" : "#F45B49")};
+    border: 1px solid transparent;
   }
 `;

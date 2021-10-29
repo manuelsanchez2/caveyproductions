@@ -42,9 +42,10 @@ export const HeroText = styled.p`
 `;
 
 export const HeroButton = styled(Button)`
-  color: black;
+  color: #fff;
+
   &:before {
-    background: #fff;
+    background: #f45b49;
     height: 500%;
   }
   &:hover:before {

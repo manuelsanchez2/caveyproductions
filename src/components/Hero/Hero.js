@@ -28,10 +28,12 @@ const Hero = () => {
           passion for music.
         </HeroText>
         <ButtonWrapper>
-          <Link to="/contact">
+          <a href="/#about">
             <Button>Get Started</Button>
+          </a>
+          <Link to="/contact">
+            <HeroButton>Contact us</HeroButton>
           </Link>
-          <HeroButton>Find More</HeroButton>
         </ButtonWrapper>
       </HeroContainer>
     </HeroSection>

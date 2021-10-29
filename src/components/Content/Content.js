@@ -50,8 +50,9 @@ export const Content = ({
                 initial={initial}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 animate={animation}
+                inverse={inverse}
               >
-                {topLine.text}
+                {topLine}
               </TopLine>
               <Heading
                 initial={initial}

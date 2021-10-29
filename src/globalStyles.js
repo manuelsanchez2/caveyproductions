@@ -11,6 +11,10 @@ const GlobalStyles = createGlobalStyle`
       font-family: 'Karla', sans-serif;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
   --color-primary-dark: #F45B49;
   --color-primary-light: #F7AA9A;
@@ -36,7 +40,7 @@ export const Container = styled.div`
 export const MainHeading = styled.h1`
   font-size: clamp(2.3rem, 6vw, 4.5rem);
   margin-bottom: 2rem;
-  color: ${({ inverse }) => (inverse ? "#ffce00" : "#fff")};
+  color: ${({ inverse }) => (inverse ? "#F45B49" : "#fff")};
   width: 100%;
   letter-spacing: 0.1rem;
   text-align: center;
@@ -45,8 +49,8 @@ export const MainHeading = styled.h1`
 export const Heading = styled.h2`
   font-size: clamp(2.3rem, 6vw, 4.5rem);
   margin: ${({ margin }) => (margin ? margin : "")};
-  color: ${({ inverse }) => (inverse ? "#ffce00" : "#fff")};
-  letter-spacing: 0.4rem;
+  color: ${({ inverse }) => (inverse ? "#F45B49" : "#fff")};
+  letter-spacing: 0.1rem;
   line-height: 1.06;
   text-align: center;
   width: ${({ width }) => (width ? width : "100%")}; ;
@@ -81,6 +85,8 @@ export const Section = styled.section`
 
 export const Row = styled.div`
   display: flex;
+  flex-direction: column;
+  row-gap: 50px;
   justify-content: ${({ justify }) => (justify ? justify : "")};
   align-items: ${({ align }) => (align ? align : "")};
   gap: ${({ gap }) => (gap ? gap : "")};
@@ -94,6 +100,12 @@ export const Row = styled.div`
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "auto")};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
   flex-wrap: ${({ wrap }) => (wrap ? wrap : "")};
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+    row-gap: 0;
+    align-items: center;
+  }
 `;
 
 export const Column = styled.div`
